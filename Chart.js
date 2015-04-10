@@ -1222,6 +1222,9 @@
 
 			ctx.beginPath();
 
+			this.outerRadius = Math.max(0, this.outerRadius);
+			this.innerRadius = Math.max(0, this.innerRadius);
+
 			ctx.arc(this.x, this.y, this.outerRadius, this.startAngle, this.endAngle);
 
 			ctx.arc(this.x, this.y, this.innerRadius, this.endAngle, this.startAngle, true);
