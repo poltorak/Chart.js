@@ -1995,7 +1995,12 @@
 					// If the responsive flag is set in the chart instance config
 					// Cascade the resize event down to the chart.
 					if (instance.options.responsive){
-						instance.resize(instance.render, true);
+						try{
+							instance.resize(instance.render, true);
+						}
+						catch(err){
+							console.log(err.message)
+						}
 					}
 				});
 			}, 50);
